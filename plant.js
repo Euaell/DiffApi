@@ -3,7 +3,12 @@ const container = document.querySelector(".mainContainer")
 
 let requestOptions = {
     method: 'GET',
-    redirect: 'follow'
+    redirect: 'follow',
+    mode: 'cors',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+    }
 };
 function random() {
     let page = Math.floor(Math.random() * 100) + 1;
