@@ -6,8 +6,8 @@ let requestOptions = {
     redirect: 'follow'
 };
 function random() {
-
-    fetch("http://localhost:3000", requestOptions)
+    let page = Math.floor(Math.random() * 100) + 1;
+    fetch(`https://trefle.io/api/v1/plants?token=sY1g1Tm4AdJ8BnvwTqrvXSvpcs0NdSax4n8IbbqIJq0&page=${page}`, requestOptions)
     .then(response => response.json())
     .then(result => result.data)
     .then(data => {
@@ -24,7 +24,7 @@ searchBtn.addEventListener("click", function() {
     let searchValue = searchInput.value;
     let searchValueLower = searchValue.toLowerCase();
     
-    fetch(`http://localhost:3000/search/${searchValueLower}`, requestOptions)
+    fetch(`https://trefle.io/api/v1/plants/search?token=sY1g1Tm4AdJ8BnvwTqrvXSvpcs0NdSax4n8IbbqIJq0&q=${searchValueLower}`, requestOptions)
     .then(response => response.json())
     .then(result => result.data)
     .then(data => {
@@ -37,7 +37,8 @@ searchBtn.addEventListener("click", function() {
 // TODO: add a tree filter
 
 edible.addEventListener("click", function() {
-    fetch("http://localhost:3000/edible", requestOptions)
+    let page = Math.floor(Math.random() * 6) + 1;
+    fetch(`https://trefle.io/api/v1/plants?page=${page}&token=sY1g1Tm4AdJ8BnvwTqrvXSvpcs0NdSax4n8IbbqIJq0&filter_not[edible_part]=null`, requestOptions)
     .then(response => response.json())
     .then(result => result.data)
     .then(data => {
@@ -49,17 +50,6 @@ edible.addEventListener("click", function() {
 
 rand.addEventListener("click", function() {
     random()
-})
-
-flower.addEventListener("click", function(e) {
-    fetch("http://localhost:3000/flower", requestOptions)
-    .then(response => response.json())
-    .then(result => result.data)
-    .then(data => {
-        container.innerHTML = "";
-        data.forEach(writePlant)
-    })
-    .catch(error => console.log(error, 'error'));
 })
 
 function writePlant(plant) {
