@@ -8,6 +8,7 @@ let requestOptions = {
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
+        'Origin': 'https://subtle-crisp-fad94d.netlify.app'
     }
 };
 function random() {
