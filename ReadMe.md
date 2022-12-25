@@ -6,7 +6,7 @@
 4) [News](https://newsapi.org/)
 5) [NASA](https://api.nasa.gov/)
 6) [Movie](https://www.themoviedb.org/documentation/api)
-7) [Meal](https://www.themealdb.com/api.php) [or](https://www.themealdb.com/)
+7) [Meal](https://www.themealdb.com/api.php)
 8) [Currency](https://www.frankfurter.app/)
 9) [Fact](https://uselessfacts.jsph.pl/) [or](https://www.programmableweb.com/api/random-useless-facts)
 10) [Chuck Norris](https://api.chucknorris.io/)

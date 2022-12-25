@@ -16,11 +16,11 @@
         <!-- <img src="" alt="icon"> -->
 
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a id="active" href="#">Home</a></li>
             <li><a href="#">Meal</a></li>
             <li><a href="../nasa/index.html">NASA</a></li>
             <li><a href="../marvel/index.html">Marvel</a></li>
-            <li><a href="../plant/index.html">Plants</a></li>
+            <li><a href="../plant/index.html">Plant</a></li>
             <li><a href="#">About</a></li>
         </ul>
     </nav>
@@ -32,53 +32,25 @@
             <h2>Search by name</h2>
             <input type="text" id="searchMealName" name="searchMealName" placeholder="Search by name">
             <button id="searchMealNameBtn">Search</button>
-            <h2>Categories</h2>
-            <ul>
-                <li><input type="checkbox" id="mainCourse" name="categories" value="mainCourse">
-                    <label for="mainCourse">Main Course</label></li>
-                <li><input type="checkbox" id="sideDish" name="categories" value="sideDish">
-                    <label for="sideDish">Side Dish</label></li>
-                <li><input type="checkbox" id="dessert" name="categories" value="dessert">
-                    <label for="dessert">Dessert</label></li>
-                <li><input type="checkbox" id="appetizer" name="categories" value="appetizer">
-                    <label for="appetizer">Appetizer</label></li>
-                <li><input type="checkbox" id="salad" name="categories" value="salad">
-                    <label for="salad">Salad</label></li>
-                <li><input type="checkbox" id="bread" name="categories" value="bread">
-                    <label for="bread">Bread</label></li>
-                <li><input type="checkbox" id="breakfast" name="categories" value="breakfast">
-                    <label for="breakfast">Breakfast</label></li>
-                <li><input type="checkbox" id="soup" name="categories" value="soup">
-                    <label for="soup">Soup</label></li>
-                <li><input type="checkbox" id="beverage" name="categories" value="beverage">
-                    <label for="beverage">Beverage</label></li>
-                <li><input type="checkbox" id="sauce" name="categories" value="sauce">
-                    <label for="sauce">Sauce</label></li>
-                <li><input type="checkbox" id="marinade" name="categories" value="marinade">
-                    <label for="marinade">Marinade</label></li>
-                <li><input type="checkbox" id="fingerfood" name="categories" value="fingerfood">
-                    <label for="fingerfood">Fingerfood</label></li>
-                <li><input type="checkbox" id="snack" name="categories" value="snack">
-                    <label for="snack">Snack</label></li>
-                <li><input type="checkbox" id="drink" name="categories" value="drink">
-                    <label for="drink">Drink</label></li>
-            </ul>  
+            <div class="categories">
+                <h2>Categories</h2>
+                <ul id="categoriesList">
+                </ul> 
+            </div> 
             <!-- location list -->
             <h2>Location</h2>
-            <ul>
-                <li><input type="checkbox" id="ethiopian" name="locations" value="ethiopian">
+            <ul id="locationsList">
+                <li><input type="checkbox" id="ethiopian" name="locations" value="ethiopian" disabled>
                     <label for="ethiopian">Ethiopian</label></li>
-                <li><input type="checkbox" id="european" name="locations" value="european">
-                    <label for="european">European</label></li>
-                <li><input type="checkbox" id="northAmerican" name="locations" value="northAmerican">
-                    <label for="northAmerican">North American</label></li>
-                <li><input type="checkbox" id="turkish" name="locations" value="turkish">
-                    <label for="turkish">Turkish</label></li>
-                </ul>
+            </ul>
 
             </ul>
             <!-- search meal button -->
             <button id="searchMeal">Search Meal</button>
+        </div>
+        
+        <div id="cardContainer" class="cardContainer">
+                                    
         </div>
     </div>
 

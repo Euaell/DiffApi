@@ -26,6 +26,10 @@ body {
     color: #ff0000;
 }
 
+#active {
+    color: #ff0000;
+}
+
 .navBar ul {
     list-style-type: none;
     margin: 0;
@@ -217,11 +221,9 @@ footer {
 }
 
 .containerMeal {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 0;
+    display: grid;
+    column-gap: 1%;
+    grid-template-columns: 25% 70%;
     min-height: 100vh;
     height: auto;
     background-color: #f7b91cf5;
@@ -231,11 +233,16 @@ footer {
     background-color: rgb(165, 43, 43);
     width: 250px;
     margin-left: 0;
+    margin-right: 0;
     color: #ffffff;
     font-size: 1.2rem;
     height: 100%;
     padding-bottom: 3rem;
     padding-left: 1rem;
+}
+
+.sideNav h2 {
+    margin-bottom: 0;
 }
 
 .sideNav ul {
@@ -263,6 +270,83 @@ footer {
     cursor: pointer;
     background-color: #fff202;
     scale: 1.05;
+}
+
+.cardContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 1rem;
+    margin-left: 0;
+    margin: 0;
+    height: auto;
+    background-color: #529d6626;
+}
+
+.sideNav input {
+    padding: 0.1rem;
+    background-color: #f4f2edc6;
+    color: #0f0606;
+    font-weight: 800;
+    margin: 0.2rem 0.2rem;
+    border-radius: 2rem;
+    transition: linear 0.1s;
+    border: 0;
+}
+
+.sideNav button:active {
+    background-color: #ffc402;
+}
+
+#searchMeal {
+    border-radius: 0;
+}
+
+.mealCard {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #f1efef;
+    width: 250px;
+    height: 500px;
+    border-radius: 0.5rem;
+    box-shadow: #000000a7 1px 1px 5px;
+    transition: linear 0.3s;
+    
+}
+.cardBody {
+    margin-top: 0;
+    /* padding: 1rem; */
+    height: 60%;
+    padding: 1rem;
+}
+
+.mealCard:hover {
+    transform : scale(1.15);
+    transition: 0.3s;
+}
+
+.mealCard img {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+}
+
+.mealDetails {
+    width: 500px;
+    height: auto;
+}
+
+.mealDetails .cardBody {
+    height: 100%;
+}
+
+.mealDetails:hover {
+    transform : scale(1.011);
+    transition: 0.3s;
 }
 
 .card {
