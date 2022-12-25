@@ -64,6 +64,7 @@ main button {
 }
 
 main button:hover {
+    cursor: pointer;
     background-color: #705212;
     scale: 1.05;
 }
@@ -155,4 +156,106 @@ footer {
 
 .desc{
     font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+.cardButton {
+    padding: 0.3rem;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
+    transition: linear 0.1s;
+}
+
+.cardButton:hover {
+    background-color: #705212;
+    scale: 1.05;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 0;
+    padding: 1rem;
+}
+
+.card {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f1efef;
+    width: 250px;
+    height: 400px;
+    border-radius: 1rem;
+    box-shadow: #000000a7 1px 1px 5px;
+    transition: linear 0.1s;
+}
+
+.card:hover {
+    box-shadow: #000000bb 1px 1px 10px;
+    scale: 1.01;
+}
+
+@media screen and (max-width: 1380px) {
+    .card {
+        margin: 1rem;
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .card {
+        margin: 0.2rem;
+        width: 30%;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        margin: 0.5rem;
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        margin: 0.5rem;
+        width: 95%;
+    }
+}
+    
+.card img {
+    align-self: flex-start;
+    margin: 0;
+    width: 100%;
+    min-height: 200px;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow: hidden;
+    box-shadow: #000000a7 0px 1px 3px;
+    object-fit: cover;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.3rem;
+    overflow: hidden;
 }
